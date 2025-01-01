@@ -1,0 +1,197 @@
+ //Variables
+
+:root {
+    --background:#f0f2f5;
+    --white:#ffffff;
+    --white2:#dde2e7;
+    --white3:#4e4f5080;
+    --white4:#ceced6;
+    --dark1:#606264;
+    --dark2:#0f0d0d;
+    --blue1:#297be5;
+    --scrollBar:#656768;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.svg {
+    width: 30px;
+    height:30px;
+    
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+body{
+    background: var(--background);
+}
+
+.header{
+position: fixed;
+top: 0;
+left: 0;
+box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+height: 60px;
+width: 100%;
+background: var(--white1);
+display: flex;
+align-items: center;
+justify-content: space-between;
+z-index: 999;
+
+.logoSearch {
+    height: 100%;
+    width: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    .logo{
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        cursor: pointer;
+        background: linear-gradient(#20afff, #0072e0);
+
+ i {
+    color: #ffffff;
+    font-size: 35px; 
+ }
+    }
+.search{
+    display: flex;
+    align-items: center;
+    background: var(--white2);
+    border-radius: 22px;
+    width: 240px;
+    height: 40px;
+    padding: 0 11px;
+
+    .svg {
+        width: 22px;
+    }
+
+        input {
+        color: var(--dark1);
+        font-size: 14px;
+        outline: none;
+        border: none;
+        padding: 0 6px;
+        background: none;
+        &::placeholder {
+            color: var(--dark1);
+        }
+        }
+}
+}
+
+.mainMenu{
+    width: 700px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+
+    .svg {
+         width: 175px;
+         height: 50px;
+         border-radius: 10px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+
+        img {
+            width: 28px;
+        }
+&::before{
+    content: "";
+    background: var(--white2);
+    position: absolute;
+    bottom: -5px;
+    background: var(--blue1);
+    width: 0;
+    height: 3px;
+}
+&:hover{
+    background: var(--white2);
+}
+&.active{
+    &::before{
+        width: 100%;
+    }
+}
+    }
+    }
+
+    .profileTools{
+        height: 100%;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .profile {
+            cursor:pointer;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            width: 112px;
+            height: 42px;
+            padding: 0 5px;
+
+        .img {
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .username {
+           font-weight: 700;
+           padding-left: 5px;
+           color: var(--dark2);
+        }
+        &:hover{
+            background: var(--white2);
+        }
+}
+.tools {
+    width: 180px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .svg {
+        width: 40px;
+        height: 40px;
+        background: var(--white2);
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 18px;
+        }
+
+        &:hover{
+            background: var(--white3);
+        }
+        }
+}
+}
+}
+
